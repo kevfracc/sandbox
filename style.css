@@ -99,7 +99,7 @@
 }
 
 .hero{
-    background: linear-gradient(to right, rgb(0,0,0, 0.4), rgb(0,0,0, 0.1)), url('./images/mets.jpeg');
+    background: linear-gradient(to right, rgb(0,0,0, 0.4), rgb(0,0,0, 0.1)), url('./images/kpop.jpeg');
     height: 100vh;
     background-position: center;
     background-size: cover;
