@@ -25,7 +25,7 @@
     color: var(--white);
     padding-left: 1rem;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .navbar__link {
@@ -38,79 +38,68 @@
     color: var(--red);
 }
 
-@media screen and (max-width: 768px) {
-    body.active{
-        overflow-y: hidden;
-        overflow-x: hidden;
+/* Add a gray background color with some padding */
+body {
+    font-family: Arial;
+    padding: 20px;
+    background: #f1f1f1;
+  }
+  
+  /* Header/Blog Title */
+  .header {
+    padding: 30px;
+    font-size: 40px;
+    text-align: center;
+    background: white;
+  }
+  
+  /* Create two unequal columns that floats next to each other */
+  /* Left column */
+  .leftcolumn {   
+    float: left;
+    width: 75%;
+  }
+  
+  /* Right column */
+  .rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+  }
+  
+  /* Fake image */
+  .fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* Add a card effect for articles */
+  .card {
+     background-color: white;
+     padding: 20px;
+     margin-top: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+  }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
     }
-    .navbar__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    }
-
-    .navbar__menu {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 100px);
-        position: absolute;
-        width: 100%;
-        top: -1000px;
-    }
-
-    .navbar__menu.active {
-        top: 100%;
-        opacity: 1;
-        z-index: 99;
-        height: 100vh;
-        font-size: 1.5rem;
-        background: var(--black);
-    }
-
-    .navbar__toggle .bar{
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    transition: all 0.3s ease-in-out;
-    background: var(--white);
-    display: block;
-    cursor: pointer;
-    }
-
-    #mobile-menu{
-        position: absolute;
-        top: 15%;
-        right: 5%;
-        transform: translate(5%, 20%);
-    }
-    
-    #mobile-menu.is-active .bar:nth-child(1){
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    #mobile-menu.is-active .bar:nth-child(2){
-        opacity: 0;
-    }
-
-    #mobile-menu.is-active .bar:nth-child(3){
-        transform: translateY(-8px) rotate(-45deg);
-    }
- 
-}
-
-.hero{
-    background: linear-gradient(to right, rgb(0,0,0, 0.4), rgb(0,0,0, 0.1)), url('./images/kpop.jpeg');
-    height: 100vh;
-    background-position: center;
-    background-size: cover;
-    padding: 0.5rem calc((100vw-1200px)/2);
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.hero__content{
-    color:var(--white);
-    padding: 3rem 1rem;
-    line-height: 1;
-}
+  }
